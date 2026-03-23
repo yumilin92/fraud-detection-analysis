@@ -8,6 +8,15 @@ standard models fail completely on such imbalanced data.
 
 ---
 
+## 📓 Notebooks
+
+| Notebook | Description |
+|----------|-------------|
+| [01 — Fraud Detection](01_fraud_detection.ipynb) | EDA, SMOTE, XGBoost, threshold tuning |
+| [02 — Model Explainability](02_model_explainability.ipynb) | SHAP, Cross-Validation, Precision-Recall |
+
+---
+
 ## 📊 Results
 
 | Metric | Score |
@@ -48,20 +57,26 @@ This improved F1 from 0.802 to **0.851**.
 ---
 
 ## 📁 Repository Structure
-
 ```
 fraud-detection-analysis/
 │
+├── data/
+│   └── creditcard.csv              # raw dataset (download from Kaggle)
+│
 ├── visuals/
-│   ├── eda_overview.png           # class imbalance + amount + time
-│   ├── threshold_tuning.png       # precision/recall vs threshold
-│   └── final_evaluation.png       # confusion matrix + ROC curve
+│   ├── eda_overview.png            # class imbalance + amount + time
+│   ├── threshold_tuning.png        # precision/recall vs threshold
+│   ├── final_evaluation.png        # confusion matrix + ROC curve
+│   ├── shap_global.png             # global feature importance (SHAP)
+│   ├── shap_local.png              # local transaction explanations
+│   └── precision_recall.png        # PR curve + optimal threshold
 │
 ├── models/
-│   ├── xgb_fraud_model.pkl        # trained XGBoost model
-│   └── optimal_threshold.pkl      # best classification threshold
+│   ├── xgb_fraud_model.pkl         # trained XGBoost model
+│   └── optimal_threshold.pkl       # best classification threshold
 │
-├── 01_fraud_detection.ipynb
+├── 01_fraud_detection.ipynb        # EDA, SMOTE, modeling, tuning
+├── 02_model_explainability.ipynb   # SHAP, CV, Precision-Recall
 └── README.md
 ```
 
