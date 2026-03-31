@@ -14,6 +14,7 @@ standard models fail completely on such imbalanced data.
 |----------|-------------|
 | [01 — Fraud Detection](01_fraud_detection.ipynb) | EDA, SMOTE, XGBoost, threshold tuning |
 | [02 — Model Explainability](02_model_explainability.ipynb) | SHAP, Cross-Validation, Precision-Recall |
+| [03 — FHE_privacy_preserving](03_fhe_privacy_preserving.ipynb) | TenSEAL CKKS |
 
 ---
 
